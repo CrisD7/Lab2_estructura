@@ -91,16 +91,18 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
     if (list -> current == NULL || list -> head == NULL) return NULL;
     Node* actual = list -> current;
+    Node * prevEliminado = actual -> prev;
+    Node * nextEliminado = actual -> next;
+    
     void* dato_eliminado = actual -> data;
     if (list -> current == list -> head){
     list -> head = list -> current -> next;
     list -> head -> prev = NULL;
     }
     else{
-        Node * prevEliminado = actual -> prev;
+        
         
         prevEliminado -> next = list -> current -> next;
-        Node * nextEliminado = actual -> next;
 
         nextEliminado -> prev = list -> current -> prev;
         }
