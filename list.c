@@ -100,6 +100,13 @@ void * popCurrent(List * list) {
         if (prevEliminado -> next == list -> current){
             prevEliminado -> next = list -> current -> next;
         }
+        Node * nextEliminado = list -> head;
+        while (nextEliminado -> next != NULL && nextEliminado -> prev != list -> current){
+            nextEliminado = nextEliminado -> next;
+        }
+        if (nextEliminado -> prev == list -> current){
+            nextEliminado -> prev = list -> current -> prev;
+        }
     }
     
     
