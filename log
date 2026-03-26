@@ -77,3 +77,22 @@ list.c:100:1: error: control reaches end of non-void function [-Werror=return-ty
       | ^
 cc1: all warnings being treated as errors
 4dc1ef9
+Thu Mar 26 07:47:56 PM UTC 2026: 
+ list.c | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:101:52: error: dereferencing ‘void *’ pointer [-Werror]
+  101 |             prevEliminado -> next = dato_eliminado -> next;
+      |                                                    ^~
+list.c:101:52: error: request for member ‘next’ in something not a structure or union
+list.c:106:27: error: dereferencing ‘void *’ pointer [-Werror]
+  106 |     return dato_eliminado -> data;
+      |                           ^~
+list.c:106:27: error: request for member ‘data’ in something not a structure or union
+list.c:107:1: error: control reaches end of non-void function [-Werror=return-type]
+  107 | }
+      | ^
+cc1: all warnings being treated as errors
+af4158b

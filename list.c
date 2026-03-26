@@ -90,10 +90,17 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     if (list -> current == NULL || list -> head == NULL) return NULL;
-    if (list -> current == list -> head) list -> head = list -> current -> next;
     void* dato_eliminado = list -> current;
-    Node * prevEliminado = dato_eliminado -> prev;
-    Node * nextEliminado = dato_eliminado -> next;
+    if (list -> current == list -> head) list -> head = list -> current -> next;
+    else{
+        Node * prevEliminado = list -> head;
+        while (prevEliminado -> next != NULL && prevEliminado -> next != dato_eliminado){
+            prevEliminado = prevEliminado -> next;
+        }
+        if (prevEliminado -> next == dato_eliminado){
+            prevEliminado -> next = dato_eliminado -> next;
+        }
+    }
     
     
     return dato_eliminado -> data;
