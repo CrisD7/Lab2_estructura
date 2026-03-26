@@ -97,17 +97,13 @@ void * popCurrent(List * list) {
     list -> head -> prev = NULL;
     }
     else{
-        Node * prevEliminado = list -> head;
-        while (prevEliminado -> next != NULL && prevEliminado -> next != list -> current){
-            prevEliminado = prevEliminado -> next;
-        }
+        Node * prevEliminado = actual -> prev;
+        
         if (prevEliminado -> next == list -> current){
             prevEliminado -> next = list -> current -> next;
         }
-        Node * nextEliminado = list -> head;
-        while (nextEliminado -> next != NULL && nextEliminado -> prev != list -> current){
-            nextEliminado = nextEliminado -> next;
-        }
+        Node * nextEliminado = actual -> next;
+        
         if (nextEliminado -> prev == list -> current){
             nextEliminado -> prev = list -> current -> prev;
         }
