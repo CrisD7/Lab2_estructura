@@ -103,7 +103,7 @@ void * popCurrent(List * list) {
     }
     
     
-    return dato_eliminado -> data;
+    return dato_eliminado;
 }
 
 void cleanList(List * list) {
