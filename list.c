@@ -90,7 +90,7 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     if (list -> current == NULL || list -> head == NULL) return NULL;
-    void* actual = list -> current;
+    Node* actual = list -> current;
     void* dato_eliminado = actual -> data;
     if (list -> current == list -> head) list -> head = list -> current -> next;
     else{
