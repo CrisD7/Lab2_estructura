@@ -123,3 +123,15 @@ Thu Mar 26 07:54:56 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 cc9dcfd
+Thu Mar 26 07:57:17 PM UTC 2026: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:94:35: error: dereferencing ‘void *’ pointer [-Werror]
+   94 |     void* dato_eliminado = actual -> data;
+      |                                   ^~
+list.c:94:35: error: request for member ‘data’ in something not a structure or union
+cc1: all warnings being treated as errors
+32b356e

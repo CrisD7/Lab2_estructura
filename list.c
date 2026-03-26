@@ -90,7 +90,8 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     if (list -> current == NULL || list -> head == NULL) return NULL;
-    void* dato_eliminado = list -> current;
+    void* actual = list -> current;
+    void* dato_eliminado = actual -> data;
     if (list -> current == list -> head) list -> head = list -> current -> next;
     else{
         Node * prevEliminado = list -> head;
@@ -108,8 +109,7 @@ void * popCurrent(List * list) {
             nextEliminado -> prev = list -> current -> prev;
         }
     }
-    
-    
+    free(actual);
     return dato_eliminado;
 }
 
