@@ -96,10 +96,16 @@ void * popCurrent(List * list) {
     
     void* dato_eliminado = actual -> data;
     if (prevEliminado != NULL){
-        prevEliminado -> next = list -> current -> next;
+        prevEliminado -> next = nextEliminado;
+    }
+    else{
+        list -> head = nextEliminado;
     }
     if (nextEliminado != NULL){
-        nextEliminado -> prev = list -> current -> prev;
+        nextEliminado -> prev = prevEliminado;
+    }
+    else{
+        list -> tail = prevEliminado;
     }
     free(actual);
     return dato_eliminado;
