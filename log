@@ -48,3 +48,32 @@ list.c:94:12: error: unused variable ‘prevEliminado’ [-Werror=unused-variabl
       |            ^~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 0b343bf
+Thu Mar 26 07:37:05 PM UTC 2026: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:95:43: error: dereferencing ‘void *’ pointer [-Werror]
+   95 |     Node * prevEliminado = dato_eliminado -> prev;
+      |                                           ^~
+list.c:95:43: error: request for member ‘prev’ in something not a structure or union
+list.c:96:43: error: dereferencing ‘void *’ pointer [-Werror]
+   96 |     Node * nextEliminado = dato_eliminado -> next;
+      |                                           ^~
+list.c:96:43: error: request for member ‘next’ in something not a structure or union
+list.c:99:27: error: dereferencing ‘void *’ pointer [-Werror]
+   99 |     return dato_eliminado -> data;
+      |                           ^~
+list.c:99:27: error: request for member ‘data’ in something not a structure or union
+list.c:96:12: error: unused variable ‘nextEliminado’ [-Werror=unused-variable]
+   96 |     Node * nextEliminado = dato_eliminado -> next;
+      |            ^~~~~~~~~~~~~
+list.c:95:12: error: unused variable ‘prevEliminado’ [-Werror=unused-variable]
+   95 |     Node * prevEliminado = dato_eliminado -> prev;
+      |            ^~~~~~~~~~~~~
+list.c:100:1: error: control reaches end of non-void function [-Werror=return-type]
+  100 | }
+      | ^
+cc1: all warnings being treated as errors
+4dc1ef9
