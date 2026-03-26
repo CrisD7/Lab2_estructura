@@ -92,7 +92,10 @@ void * popCurrent(List * list) {
     if (list -> current == NULL || list -> head == NULL) return NULL;
     Node* actual = list -> current;
     void* dato_eliminado = actual -> data;
-    if (list -> current == list -> head) list -> head = list -> current -> next;
+    if (list -> current == list -> head){
+    list -> head = list -> current -> next;
+    list -> head -> prev = NULL;
+    }
     else{
         Node * prevEliminado = list -> head;
         while (prevEliminado -> next != NULL && prevEliminado -> next != list -> current){
