@@ -96,3 +96,18 @@ list.c:107:1: error: control reaches end of non-void function [-Werror=return-ty
       | ^
 cc1: all warnings being treated as errors
 af4158b
+Thu Mar 26 07:49:15 PM UTC 2026: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:106:27: error: dereferencing ‘void *’ pointer [-Werror]
+  106 |     return dato_eliminado -> data;
+      |                           ^~
+list.c:106:27: error: request for member ‘data’ in something not a structure or union
+list.c:107:1: error: control reaches end of non-void function [-Werror=return-type]
+  107 | }
+      | ^
+cc1: all warnings being treated as errors
+de3c792
