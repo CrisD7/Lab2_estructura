@@ -96,8 +96,8 @@ void * popCurrent(List * list) {
     
     void* dato_eliminado = actual -> data;
     if (list -> current == list -> head){
-    list -> head = list -> current -> next;
-    list -> head -> prev = NULL;
+        list -> head = list -> current -> next;
+        list -> head -> prev = NULL;
     } 
     prevEliminado -> next = list -> current -> next;
     nextEliminado -> prev = list -> current -> prev;
