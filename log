@@ -227,3 +227,17 @@ Sat Mar 28 03:27:19 AM UTC 2026:
  tests:  10|2
 total_score: 40/60
 43118c1
+Sat Mar 28 03:36:25 AM UTC 2026: 
+ list.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:109:5: error: expected expression before ‘}’ token
+  109 |     }
+      |     ^
+list.c:109:5: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+list.c:96:6: note: declared here
+   96 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+c6e85ed
