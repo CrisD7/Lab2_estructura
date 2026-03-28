@@ -111,15 +111,13 @@ void * popCurrent(List * list) {
     if (prevElim != NULL){
         prevElim -> next = nextElim;
     }
-    else{
-        list -> head = nextElim;
-    }
+    else list -> head = nextElim;
+    
     if (nextElim != NULL){
         nextElim -> prev = prevElim;
     }
-    else{
-        list -> tail = prevElim;
-    }
+    else list -> tail = prevElim;
+    
     free(actual);
     return dato_elim;
 }
